@@ -98,6 +98,23 @@
         {
             "server": {
                 "$schema": "",
+                "name": "localhost/dummy",
+                "description": "Local Dummy MCP Server for testing",
+                "title": "ocal Dummy MCP Server for testing",
+                "version": "1.0.0"
+            },
+            "_meta": {
+                "io.modelcontextprotocol.registry/official": {
+                    "status": "active",
+                    "publishedAt": "2025-11-14T12:56:06.048672Z",
+                    "updatedAt": "2025-11-14T12:56:06.048672Z",
+                    "isLatest": true
+                }
+            }
+        },
+        {
+            "server": {
+                "$schema": "",
                 "name": "localhost/mcp-obsidian",
                 "description": "Local obsidian MCP Server",
                 "title": "Local obsidian MCP Server",
