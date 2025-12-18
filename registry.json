@@ -100,7 +100,7 @@
                 "$schema": "",
                 "name": "localhost/dummy",
                 "description": "Local Dummy MCP Server for testing",
-                "title": "ocal Dummy MCP Server for testing",
+                "title": "Local Dummy MCP Server for testing",
                 "version": "1.0.0"
             },
             "_meta": {
