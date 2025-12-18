@@ -1,0 +1,216 @@
+{
+    "servers": [
+        {
+            "server": {
+                "$schema": "",
+                "name": "com.microsoft/azure",
+                "description": "All Azure MCP tools to create a seamless connection between AI agents and Azure services.",
+                "title": "Azure MCP Server",
+                "repository": {
+                    "url": "https://github.com/microsoft/mcp",
+                    "source": "github",
+                    "subfolder": "servers/Azure.Mcp.Server"
+                },
+                "version": "2.0.0-beta.5",
+                "websiteUrl": "https://azure.microsoft.com/",
+                "packages": [
+                    {
+                        "registryType": "nuget",
+                        "identifier": "Azure.Mcp",
+                        "version": "2.0.0-beta.5",
+                        "transport": {
+                            "type": "stdio"
+                        },
+                        "packageArguments": [
+                            {
+                                "value": "server",
+                                "type": "positional"
+                            },
+                            {
+                                "value": "start",
+                                "type": "positional"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "_meta": {
+                "io.modelcontextprotocol.registry/official": {
+                    "status": "active",
+                    "publishedAt": "2025-11-21T10:08:50.528888Z",
+                    "updatedAt": "2025-11-21T15:53:31.922257Z",
+                    "isLatest": true
+                }
+            }
+        },
+        {
+            "server": {
+                "$schema": "",
+                "name": "io.github.github/github-mcp-server",
+                "description": "Connect AI assistants to GitHub - manage repos, issues, PRs, and workflows through natural language.",
+                "title": "GitHub",
+                "repository": {
+                    "url": "https://github.com/github/github-mcp-server",
+                    "source": "github"
+                },
+                "version": "0.23.0-gosdk",
+                "remotes": [
+                    {
+                        "type": "streamable-http",
+                        "url": "https://api.githubcopilot.com/mcp/",
+                        "headers": [
+                            {
+                                "description": "Authentication token (PAT or App token)",
+                                "isRequired": true,
+                                "isSecret": true,
+                                "name": "Authorization"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "_meta": {
+                "io.modelcontextprotocol.registry/official": {
+                    "status": "active",
+                    "publishedAt": "2025-11-25T13:05:44.649002Z",
+                    "updatedAt": "2025-11-25T13:05:44.649002Z",
+                    "isLatest": true
+                }
+            }
+        },
+        {
+            "server": {
+                "$schema": "",
+                "name": "localhost/databricks-mcp-server",
+                "description": "Local Databricks MCP Server",
+                "title": "Local Databricks MCP Server",
+                "version": "1.0.0"
+            },
+            "_meta": {
+                "io.modelcontextprotocol.registry/official": {
+                    "status": "active",
+                    "publishedAt": "2025-11-14T12:56:06.048672Z",
+                    "updatedAt": "2025-11-14T12:56:06.048672Z",
+                    "isLatest": true
+                }
+            }
+        },
+        {
+            "server": {
+                "$schema": "",
+                "name": "localhost/mcp-obsidian",
+                "description": "Local obsidian MCP Server",
+                "title": "Local obsidian MCP Server",
+                "version": "1.0.0"
+            },
+            "_meta": {
+                "io.modelcontextprotocol.registry/official": {
+                    "status": "active",
+                    "publishedAt": "2025-12-08T12:31:54.071263Z",
+                    "updatedAt": "2025-12-08T12:31:54.071263Z",
+                    "isLatest": true
+                }
+            }
+        },
+        {
+            "server": {
+                "$schema": "",
+                "name": "microsoft/azure-devops-mcp",
+                "description": "Interact with Azure DevOps services like repositories, work items, builds, releases, test plans, and code search.",
+                "title": "Azure DevOps",
+                "repository": {
+                    "url": "https://github.com/microsoft/azure-devops-mcp",
+                    "source": "github"
+                },
+                "version": "1.0.0",
+                "websiteUrl": "https://github.com/microsoft/azure-devops-mcp",
+                "packages": [
+                    {
+                        "registryType": "npm",
+                        "identifier": "@azure-devops/mcp",
+                        "version": "latest",
+                        "runtimeHint": "npx",
+                        "transport": {
+                            "type": "stdio"
+                        },
+                        "runtimeArguments": [
+                            {
+                                "isRequired": true,
+                                "format": "string",
+                                "value": "-y",
+                                "type": "positional",
+                                "valueHint": "noninteractive_mode"
+                            }
+                        ],
+                        "packageArguments": [
+                            {
+                                "isRequired": true,
+                                "format": "string",
+                                "value": "{ado_org}",
+                                "variables": {
+                                    "ado_org": {
+                                        "description": "Azure DevOps organization name (e.g., contoso).",
+                                        "isRequired": true
+                                    }
+                                },
+                                "type": "positional",
+                                "valueHint": "organization"
+                            },
+                            {
+                                "format": "string",
+                                "type": "named",
+                                "name": "-d"
+                            },
+                            {
+                                "format": "string",
+                                "value": "{ado_domain}",
+                                "variables": {
+                                    "ado_domain": {
+                                        "description": "Repeat to enable specific domains: core, work, work-items, search, test-plans, repositories, wiki, pipelines, advanced-security."
+                                    }
+                                },
+                                "type": "positional",
+                                "isRepeated": true
+                            }
+                        ]
+                    }
+                ]
+            },
+            "_meta": {
+                "io.modelcontextprotocol.registry/official": {
+                    "status": "active",
+                    "publishedAt": "2025-11-21T10:30:54.514977Z",
+                    "updatedAt": "2025-11-21T10:30:54.514977Z",
+                    "isLatest": true
+                }
+            }
+        },
+        {
+            "server": {
+                "$schema": "",
+                "name": "microsoft.docs/mcp",
+                "description": "Microsoft Learn Documentation",
+                "title": "Microsoft Docs",
+                "version": "1.0.0",
+                "websiteUrl": "https://learn.microsoft.com/en-us/training/support/mcp",
+                "remotes": [
+                    {
+                        "type": "streamable-http",
+                        "url": "https://learn.microsoft.com/api/mcp"
+                    }
+                ]
+            },
+            "_meta": {
+                "io.modelcontextprotocol.registry/official": {
+                    "status": "active",
+                    "publishedAt": "2025-11-13T11:10:21.640631Z",
+                    "updatedAt": "2025-11-13T11:10:21.640631Z",
+                    "isLatest": true
+                }
+            }
+        }
+    ],
+    "metadata": {
+        "count": 6
+    }
+}
