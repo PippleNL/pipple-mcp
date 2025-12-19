@@ -81,57 +81,6 @@
         {
             "server": {
                 "$schema": "",
-                "name": "localhost/databricks-mcp-server",
-                "description": "Local Databricks MCP Server",
-                "title": "Local Databricks MCP Server",
-                "version": "1.0.0"
-            },
-            "_meta": {
-                "io.modelcontextprotocol.registry/official": {
-                    "status": "active",
-                    "publishedAt": "2025-11-14T12:56:06.048672Z",
-                    "updatedAt": "2025-11-14T12:56:06.048672Z",
-                    "isLatest": true
-                }
-            }
-        },
-        {
-            "server": {
-                "$schema": "",
-                "name": "localhost/dummy",
-                "description": "Local Dummy MCP Server for testing",
-                "title": "Local Dummy MCP Server for testing",
-                "version": "1.0.0"
-            },
-            "_meta": {
-                "io.modelcontextprotocol.registry/official": {
-                    "status": "active",
-                    "publishedAt": "2025-11-14T12:56:06.048672Z",
-                    "updatedAt": "2025-11-14T12:56:06.048672Z",
-                    "isLatest": true
-                }
-            }
-        },
-        {
-            "server": {
-                "$schema": "",
-                "name": "localhost/mcp-obsidian",
-                "description": "Local obsidian MCP Server",
-                "title": "Local obsidian MCP Server",
-                "version": "1.0.0"
-            },
-            "_meta": {
-                "io.modelcontextprotocol.registry/official": {
-                    "status": "active",
-                    "publishedAt": "2025-12-08T12:31:54.071263Z",
-                    "updatedAt": "2025-12-08T12:31:54.071263Z",
-                    "isLatest": true
-                }
-            }
-        },
-        {
-            "server": {
-                "$schema": "",
                 "name": "microsoft/azure-devops-mcp",
                 "description": "Interact with Azure DevOps services like repositories, work items, builds, releases, test plans, and code search.",
                 "title": "Azure DevOps",
